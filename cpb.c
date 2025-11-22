@@ -58,7 +58,7 @@ void createMakefile(char *flag,char *cc, char *flags, const char *name, char *in
 			cc, flags, include, lib,
 			src, obj,name,name);
 		if(size < 0) {
-		printf("ERROR formating C main failed\n");
+		printf("ERROR formating Makefile failed\n");
 		exit(EXIT_FAILURE);
 		}
 		char *content = (char*)malloc(size+1);
@@ -131,7 +131,8 @@ int main(int argc, char *argv[]) {
 		if(!strcmp(flag,"-s")) createSimpleProject(name);
 		else if(!strcmp(flag,"-l")) createLargeProject(name);
 		else if(!strcmp(flag,"-h")) printf(help);
-		else printf("Incorrect flag, use \"cmpb -h\" for help\n");
+		else if (!strcmp(flag,"-c")) createCustomProject(name);
+		else printf("Incorrect flag, use \"cpb -h\" for help\n");
 	}
 	else if(argc < 3) {
 		if(!strcmp(name,"-h")) printf(help);

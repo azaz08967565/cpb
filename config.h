@@ -1,8 +1,17 @@
+void createCustomProject(const char *name) {
+	// your custom script
+	printf("Place your custom script in config.h and remove this message");
+}
+const char *main_c_content_custom = "";
+
+const char *makefile_content_custom = "";
+
 const char *help =
 	"Usage: cpb <project_name> <flag>\n"
 	"List of flags:\n"
 	"-s - simple project\n"
 	"-l - large project\n"
+	"-c - custom project\n"
 	"-h - prints this message\n";
 const char *main_c_content = 
 	"#include <stdio.h>\n\n"
