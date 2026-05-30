@@ -1,6 +1,5 @@
 void createCustomProject(const char *name) {
-	// your custom script
-	printf("Place your custom script in config.h and remove this message");
+	printf("Place your custom script in config.h and remove this message\n");
 }
 const char *main_c_content_custom = "";
 
